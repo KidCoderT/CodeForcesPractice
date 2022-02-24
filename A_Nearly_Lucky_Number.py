@@ -1,12 +1,15 @@
 
-n = int(input())
+n = input()
 
-no_of_4s = str(n).count('4')
-no_of_7s = str(n).count('7')
+no_of_4s = n.count('4')
+no_of_7s = n.count('7')
 
-if no_of_4s + no_of_7s == len(str(n)):
-	print("YES")
-elif (no_of_4s + no_of_7s % 4 == 0 and no_of_4s != 0) or (no_of_4s + no_of_7s % 7 == 0 and no_of_7s != 0):
+number_of_digits_of_lucky_number = str(no_of_4s + no_of_7s)
+
+no_of_4s = number_of_digits_of_lucky_number.count('4')
+no_of_7s = number_of_digits_of_lucky_number.count('7')
+
+if len(number_of_digits_of_lucky_number) == no_of_4s + no_of_7s:
 	print("YES")
 else:
 	print("NO")

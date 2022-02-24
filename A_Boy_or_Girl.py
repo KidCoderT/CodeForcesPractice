@@ -1,11 +1,12 @@
 
 username = input()
 
-if username == "wjmzbmr":
-	print("CHAT WITH HER!")
-elif len(username) % 2 != 0:
+# convert to a set to remove duplicates
+username = set(list(username))
+
+if len(username) % 2 != 0: # use is male
 	print("IGNORE HIM!")
-else:
+else: # user is female
 	print("CHAT WITH HER!")
 
 
